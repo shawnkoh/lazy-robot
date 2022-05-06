@@ -2,7 +2,7 @@
 using BepInEx.Logging;
 using HarmonyLib;
 
-namespace DysonSphereProgram.Modding.StarterTemplate
+namespace LazyRobot
 {
   [BepInPlugin(GUID, NAME, VERSION)]
   [BepInProcess("DSPGAME.exe")]
@@ -17,16 +17,16 @@ namespace DysonSphereProgram.Modding.StarterTemplate
 
     private void Awake()
     {
-      Plugin.Log = Logger;
+      Log = Logger;
       _harmony = new Harmony(GUID);
-      Logger.LogInfo("StarterTemplate Awake() called");
+      Logger.LogInfo("LazyRobot Awake() called");
     }
 
     private void OnDestroy()
     {
-      Logger.LogInfo("StarterTemplate OnDestroy() called");
+      Logger.LogInfo("LazyRobot OnDestroy() called");
       _harmony?.UnpatchSelf();
-      Plugin.Log = null;
+      Log = null;
     }
   }
 }
