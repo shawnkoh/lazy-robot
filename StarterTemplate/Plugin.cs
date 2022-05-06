@@ -8,8 +8,8 @@ namespace DysonSphereProgram.Modding.StarterTemplate
   [BepInProcess("DSPGAME.exe")]
   public class Plugin : BaseUnityPlugin
   {
-    public const string GUID = "your.guid.here.StarterTemplate";
-    public const string NAME = "StarterTemplate";
+    public const string GUID = "sg.shawnkoh.LazyRobot";
+    public const string NAME = "LazyRobot";
     public const string VERSION = "1.0.0";
 
     private Harmony _harmony;
